@@ -15,7 +15,7 @@ html {
 body {
   background-color: hsl(210, 60%, 98%);
   /*demo only*/
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   place-content: center;
 }
