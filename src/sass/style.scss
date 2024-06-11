@@ -1,0 +1,126 @@
+@use "colors" as *;
+@use "base" as *;
+
+:root {
+    --fs-600: 20px;
+}
+
+h1 {
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    color: $clr-neutral-800;
+    font-size: 20px;
+    @include mq("md") {
+        font-size: 24px;
+    }
+    span {
+        color: $clr-white;
+        background-color: $clr-primary-blue;
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 6px;
+        margin-left: 9px;
+    }
+}
+.notifications {
+    background-color: $clr-white;
+    padding: 1.5rem 1rem;
+    @include mq("md") {
+        padding: 33px 30px;
+        border-radius: 15px;
+    }
+    max-width: 730px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        a {
+            color: $clr-neutral-400;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            color: $clr-primary-blue;
+        }
+    }
+}
+.notification {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 13px;
+
+    padding: 1rem;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    color: $clr-neutral-700;
+
+    @include mq("md") {
+        font-size: 1rem;
+    }
+    .profile_picture,
+    img {
+        width: 39px;
+        @include mq("md") {
+            width: 45px;
+        }
+    }
+    .user_name {
+        color: $clr-neutral-800;
+        font-weight: bold;
+    }
+
+    &__link {
+        color: $clr-primary-blue;
+        font-weight: bold;
+        &:visited {
+            color: $clr-neutral-700;
+        }
+    }
+
+    &_date {
+        color: $clr-neutral-400;
+    }
+    &__message {
+        border-radius: 5px;
+        border: 1px solid $clr-neutral-100;
+        padding: 1rem;
+        transition: 0.3s;
+        &:hover {
+            background-color: $clr-neutral-200;
+            cursor: pointer;
+        }
+    }
+}
+
+.notification:has(img + div + img) {
+    grid-template-columns: auto 1fr 39px;
+    img:last-of-type {
+        cursor: pointer;
+    }
+}
+
+.notification.unread {
+    background-color: $clr-neutral-100;
+    .notification__body {
+        :nth-last-child(2) {
+            position: relative;
+            &::after {
+                content: "";
+                background-color: $clr-primary-red;
+                width: 0.5rem;
+                border-radius: 50%;
+                aspect-ratio: 1;
+                position: absolute;
+                right: calc((8px + 6px) * -1);
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
