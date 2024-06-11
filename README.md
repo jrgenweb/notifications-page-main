@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![https://raw.githubusercontent.com/jrgenweb/notifications-page-main/master/screenshot.webp](https://raw.githubusercontent.com/jrgenweb/notifications-page-main/master/screenshot.webp)
 
 ### Links
 
