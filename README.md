@@ -9,6 +9,7 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
+  - [Usage](#usage)
   - [Built with](#built-with)
 - [Author](#author)
 
@@ -33,6 +34,11 @@ Users should be able to:
 - Live Site URL: [https://jrgenweb.github.io/notifications-page-main](https://jrgenweb.github.io/notifications-page-main)
 
 ## My process
+
+### Usage
+
+- `npm install`
+- `npm start`
 
 ### Built with
 
